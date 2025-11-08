@@ -7,22 +7,22 @@ export default {
   theme: {
     extend: {
       colors: {
-        // Premium Luxury Palette
-        'ocean-depths': '#0D0D0D',
-        'deep-current': '#1A1A1A',
-        'mystic-waters': '#2D2D2D',
-        'aqua-dream': '#E8B945',
-        'soft-aqua': '#F5D547',
-        'gentle-teal': '#E8B945',
-        'pearl-shimmer': '#FFFFFF',
+        // Particle Network Palette
+        'ocean-depths': '#0a0e1a',
+        'deep-current': '#1a1f35',
+        'mystic-waters': '#0f1423',
+        'aqua-dream': '#00d9ff',
+        'soft-aqua': '#00d9ff',
+        'gentle-teal': '#00bfff',
+        'pearl-shimmer': '#E8F4F8',
         'moonlight-pearl': '#F5F5F5',
-        'golden-ray': '#FFD700',
-        'sunbeam-gold': '#FFC700',
-        'coral-whisper': '#FF6B35',
-        'sea-foam': '#FF1493',
+        'golden-ray': '#00d9ff',
+        'sunbeam-gold': '#00bfff',
+        'coral-whisper': '#5dfdff',
+        'sea-foam': '#0099cc',
         'crystal-blue': '#00D9FF',
         'mermaid-silver': '#C0C0C0',
-        'starfish-glow': '#FF4500',
+        'starfish-glow': '#5dfdff',
       },
       fontFamily: {
         'serif-elegant': ['Playfair Display', 'serif'],
@@ -33,8 +33,8 @@ export default {
         'shimmer': 'shimmer 3s ease-in-out infinite',
         'wave-flow': 'wave-flow 8s ease-in-out infinite',
         'pearl-glow': 'pearl-glow 4s ease-in-out infinite',
-        'underwater-drift': 'underwater-drift 12s linear infinite',
-        'vinyl-spin': 'vinyl-spin 8s linear infinite',
+        'particle-converge': 'particle-converge 8s ease-in-out infinite',
+        'particle-pulse': 'particle-pulse 4s ease-in-out infinite',
         'ripple': 'ripple 2s ease-out infinite',
       },
       keyframes: {
@@ -53,16 +53,17 @@ export default {
           '75%': { transform: 'translateX(-10px) translateY(-5px)' },
         },
         'pearl-glow': {
-          '0%, 100%': { boxShadow: '0 0 20px rgba(123, 196, 196, 0.3)' },
-          '50%': { boxShadow: '0 0 40px rgba(123, 196, 196, 0.6)' },
+          '0%, 100%': { boxShadow: '0 0 20px rgba(0, 217, 255, 0.3), 0 0 40px rgba(0, 217, 255, 0.1)' },
+          '50%': { boxShadow: '0 0 30px rgba(0, 217, 255, 0.5), 0 0 60px rgba(0, 217, 255, 0.2)' },
         },
-        'underwater-drift': {
-          '0%': { transform: 'translateY(100vh) translateX(-10px) rotate(0deg)' },
-          '100%': { transform: 'translateY(-100px) translateX(10px) rotate(360deg)' },
+        'particle-converge': {
+          '0%': { transform: 'translate(100px, 100px) scale(0)', opacity: '0' },
+          '50%': { transform: 'translate(0, 0) scale(1)', opacity: '1' },
+          '100%': { transform: 'translate(-100px, -100px) scale(0)', opacity: '0' },
         },
-        'vinyl-spin': {
-          '0%': { transform: 'rotate(0deg)' },
-          '100%': { transform: 'rotate(360deg)' },
+        'particle-pulse': {
+          '0%, 100%': { transform: 'scale(1)', boxShadow: '0 0 40px rgba(0, 217, 255, 0.6)' },
+          '50%': { transform: 'scale(1.05)', boxShadow: '0 0 60px rgba(0, 217, 255, 0.8), 0 0 80px rgba(0, 217, 255, 0.4)' },
         },
         'ripple': {
           '0%': { transform: 'scale(0)', opacity: '1' },
@@ -70,11 +71,11 @@ export default {
         },
       },
       backgroundImage: {
-        'ocean-gradient': 'linear-gradient(135deg, #0D0D0D 0%, #1A1A1A 50%, #2D2D2D 100%)',
-        'underwater-light': 'radial-gradient(ellipse at top, rgba(255, 215, 0, 0.15) 0%, transparent 70%)',
-        'pearl-shimmer': 'linear-gradient(45deg, #F5F5F5 0%, #FFFFFF 50%, #F5F5F5 100%)',
-        'golden-rays': 'linear-gradient(45deg, transparent 30%, rgba(255, 215, 0, 0.15) 50%, transparent 70%)',
-        'wave-pattern': 'repeating-linear-gradient(90deg, transparent, transparent 2px, rgba(255, 215, 0, 0.1) 2px, rgba(255, 215, 0, 0.1) 4px)',
+        'ocean-gradient': 'linear-gradient(135deg, #0a0e1a 0%, #1a1f35 50%, #0f1423 100%)',
+        'underwater-light': 'radial-gradient(ellipse at center, rgba(0, 217, 255, 0.1) 0%, transparent 70%)',
+        'pearl-shimmer': 'linear-gradient(45deg, #E8F4F8 0%, #F5F5F5 50%, #E8F4F8 100%)',
+        'golden-rays': 'linear-gradient(45deg, transparent 30%, rgba(0, 217, 255, 0.1) 50%, transparent 70%)',
+        'wave-pattern': 'repeating-linear-gradient(90deg, transparent, transparent 2px, rgba(0, 217, 255, 0.05) 2px, rgba(0, 217, 255, 0.05) 4px)',
       },
       backdropBlur: {
         'ocean': '20px',
